@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "botonDisparo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "botonDisparo@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "botonDisparo.png",
+      "filename" : "botonDisparo@3x.png",
       "scale" : "3x"
     }
   ],

@@ -14,7 +14,7 @@ class AjustesNumerosViewController: UIViewController, UIPickerViewDelegate, UIPi
     var valorMaximo = 10
     var valorInicialMinimo = 0
     var valorInicialMaximo = 10
-    let arrayIdiomas = ["English", "Spanish", "Portuguese"]
+    let arrayIdiomas = ["English", "Spanish", "Portuguese","French","Italian"]
     
     @IBOutlet weak var segmentPerimetroJuego: UISegmentedControl!
     
@@ -27,7 +27,10 @@ class AjustesNumerosViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var labelMaximo: UILabel!
     
     @IBOutlet weak var pickerIdiomas: UIPickerView!
-    
+        
+    @IBAction func btnBack(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

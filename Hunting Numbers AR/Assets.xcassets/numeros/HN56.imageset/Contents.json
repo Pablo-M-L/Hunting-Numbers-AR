@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "HN56-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "HN56@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "HN56.png",
+      "filename" : "HN56@3x.png",
       "scale" : "3x"
     }
   ],

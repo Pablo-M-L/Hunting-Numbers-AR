@@ -18,6 +18,8 @@
 		8444A08A233F7EE100174019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444A088233F7EE100174019 /* LaunchScreen.storyboard */; };
 		845DD4692387D06C009B749F /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DD4682387D06C009B749F /* MathUtils.swift */; };
 		845DD46B238869A8009B749F /* NFF-explode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 845DD46A238869A8009B749F /* NFF-explode.wav */; };
+		8486B822239994D6004C25AC /* IntruccionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486B821239994D6004C25AC /* IntruccionesViewController.swift */; };
+		8486B833239E705D004C25AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8486B835239E705D004C25AC /* Localizable.strings */; };
 		8492DEDD238BCED1006DEC75 /* FinPartidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492DEDC238BCED1006DEC75 /* FinPartidaViewController.swift */; };
 		84994D042379559E003F617A /* slam.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84994D032379559E003F617A /* slam.wav */; };
 		84994D06237957F1003F617A /* finPartida.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84994D05237957F1003F617A /* finPartida.wav */; };
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		8407685A23756D6600D79213 /* Utilidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilidades.swift; sourceTree = "<group>"; };
 		8407685E2375E26B00D79213 /* laser-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "laser-sound.wav"; sourceTree = "<group>"; };
-		8444A078233F7EDC00174019 /* Hunting Numbers AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hunting Numbers AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8444A078233F7EDC00174019 /* Number H..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Number H..app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444A07B233F7EDC00174019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8444A07D233F7EDC00174019 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 		8444A07F233F7EDC00174019 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
@@ -39,6 +41,29 @@
 		8444A08B233F7EE100174019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845DD4682387D06C009B749F /* MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
 		845DD46A238869A8009B749F /* NFF-explode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "NFF-explode.wav"; sourceTree = "<group>"; };
+		8486B821239994D6004C25AC /* IntruccionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntruccionesViewController.swift; sourceTree = "<group>"; };
+		8486B823239B9391004C25AC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		8486B824239B9391004C25AC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8486B825239B9491004C25AC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		8486B826239B9491004C25AC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8486B827239B9498004C25AC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
+		8486B828239B9499004C25AC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8486B829239B949F004C25AC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		8486B82A239B949F004C25AC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8486B82B239B954C004C25AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		8486B82C239B954C004C25AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8486B82D239B9553004C25AC /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Main.strings"; sourceTree = "<group>"; };
+		8486B82E239B9553004C25AC /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8486B82F239B955B004C25AC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		8486B830239B955B004C25AC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8486B834239E705D004C25AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8486B836239E7066004C25AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8486B837239E706A004C25AC /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8486B838239E706B004C25AC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8486B839239E706D004C25AC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8486B83A239E706E004C25AC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8486B83B239E706F004C25AC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8486B83C239E7070004C25AC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8492DEDC238BCED1006DEC75 /* FinPartidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinPartidaViewController.swift; sourceTree = "<group>"; };
 		84994D032379559E003F617A /* slam.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slam.wav; sourceTree = "<group>"; };
 		84994D05237957F1003F617A /* finPartida.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = finPartida.wav; sourceTree = "<group>"; };
@@ -72,7 +97,7 @@
 		8444A079233F7EDC00174019 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8444A078233F7EDC00174019 /* Hunting Numbers AR.app */,
+				8444A078233F7EDC00174019 /* Number H..app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +115,7 @@
 				8444A08B233F7EE100174019 /* Info.plist */,
 				8407685A23756D6600D79213 /* Utilidades.swift */,
 				845DD4682387D06C009B749F /* MathUtils.swift */,
+				8486B835239E705D004C25AC /* Localizable.strings */,
 			);
 			path = "Hunting Numbers AR";
 			sourceTree = "<group>";
@@ -101,6 +127,7 @@
 				84994D28237D183D003F617A /* MenuPrincipalViewController.swift */,
 				84994D2A237D185F003F617A /* AjustesNumerosViewController.swift */,
 				8492DEDC238BCED1006DEC75 /* FinPartidaViewController.swift */,
+				8486B821239994D6004C25AC /* IntruccionesViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -122,7 +149,7 @@
 			);
 			name = "Hunting Numbers AR";
 			productName = "Hunting Numbers AR";
-			productReference = 8444A078233F7EDC00174019 /* Hunting Numbers AR.app */;
+			productReference = 8444A078233F7EDC00174019 /* Number H..app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,6 +174,13 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				"es-419",
+				"pt-PT",
+				"pt-BR",
+				fr,
+				"fr-CA",
+				it,
 			);
 			mainGroup = 8444A06F233F7EDC00174019;
 			productRefGroup = 8444A079233F7EDC00174019 /* Products */;
@@ -167,6 +201,7 @@
 				8407685F2375E26C00D79213 /* laser-sound.wav in Resources */,
 				8444A08A233F7EE100174019 /* LaunchScreen.storyboard in Resources */,
 				845DD46B238869A8009B749F /* NFF-explode.wav in Resources */,
+				8486B833239E705D004C25AC /* Localizable.strings in Resources */,
 				84994D042379559E003F617A /* slam.wav in Resources */,
 				84994D06237957F1003F617A /* finPartida.wav in Resources */,
 				8444A087233F7EE100174019 /* Assets.xcassets in Resources */,
@@ -186,6 +221,7 @@
 				8492DEDD238BCED1006DEC75 /* FinPartidaViewController.swift in Sources */,
 				8444A082233F7EDC00174019 /* ViewController.swift in Sources */,
 				84994D2B237D185F003F617A /* AjustesNumerosViewController.swift in Sources */,
+				8486B822239994D6004C25AC /* IntruccionesViewController.swift in Sources */,
 				8444A080233F7EDC00174019 /* Scene.swift in Sources */,
 				8444A07C233F7EDC00174019 /* AppDelegate.swift in Sources */,
 				8407685B23756D6600D79213 /* Utilidades.swift in Sources */,
@@ -199,6 +235,13 @@
 			isa = PBXVariantGroup;
 			children = (
 				8444A084233F7EDC00174019 /* Base */,
+				8486B823239B9391004C25AC /* es */,
+				8486B825239B9491004C25AC /* es-419 */,
+				8486B827239B9498004C25AC /* pt-PT */,
+				8486B829239B949F004C25AC /* pt-BR */,
+				8486B82B239B954C004C25AC /* fr */,
+				8486B82D239B9553004C25AC /* fr-CA */,
+				8486B82F239B955B004C25AC /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -207,8 +250,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				8444A089233F7EE100174019 /* Base */,
+				8486B824239B9391004C25AC /* es */,
+				8486B826239B9491004C25AC /* es-419 */,
+				8486B828239B9499004C25AC /* pt-PT */,
+				8486B82A239B949F004C25AC /* pt-BR */,
+				8486B82C239B954C004C25AC /* fr */,
+				8486B82E239B9553004C25AC /* fr-CA */,
+				8486B830239B955B004C25AC /* it */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8486B835239E705D004C25AC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8486B834239E705D004C25AC /* en */,
+				8486B836239E7066004C25AC /* fr */,
+				8486B837239E706A004C25AC /* fr-CA */,
+				8486B838239E706B004C25AC /* it */,
+				8486B839239E706D004C25AC /* pt-BR */,
+				8486B83A239E706E004C25AC /* pt-PT */,
+				8486B83B239E706F004C25AC /* es */,
+				8486B83C239E7070004C25AC /* es-419 */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -218,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -278,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -340,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pablomillanlopez.juegos.Hunting-Numbers-AR";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Number H.";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,7 +425,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pablomillanlopez.juegos.Hunting-Numbers-AR";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Number H.";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

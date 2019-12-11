@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "mirillaNegra-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "mirillaNegra@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mirillaNegra.png",
+      "filename" : "mirillaNegra@3x.png",
       "scale" : "3x"
     }
   ],

@@ -31,7 +31,10 @@ class FinPartidaViewController: UIViewController {
         }
     }
     
-
+    @IBAction func btnClose(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 

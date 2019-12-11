@@ -49,6 +49,9 @@ class Scene: SKScene {
     
     let arrayTextoNumerosPortugues = ["UM", "DOIS", "TRÊS", "QUATRO", "CINCO", "SEIS", "SETE", "OITO", "NOVE", "DEZ", "ONZE", "DOZE", "TREZE", "QUATORZE", "QUINZE", "DEZESSEIS", "DEZASSETE", "DEZOITO", "DEZENOVE", "VINTE","VINTE E UM","VINTE E DOIS", "VINTE E TRÊS", "VINTE E QUATRO", "VINTE E CINCO", "VINTE E SEIS", "VINTE E SETE", "VINTE E OITO", "VINTE E NOVE", "TRINTA", "TRINTA E UM", "TRINTA E DOIS", "TRINTA E TRÊS", "TRINTA E QUATRO","TRINTA E CINCO", "TRINTA E SEIS", "TRINTA E SETE", "TRINTA E OITO", "TRINTA E NOVE", "QUARENTA", "QUARENTA E UM", "QUARENTA E DOIS", "QUARENTA E TRÊS", "QUARENTA E QUATRO", "QUARENTA E CINCO", "QUARENTA E SEIS", "QUARENTA E SETE", "QUARENTA E OITO", "QUARENTA E NOVE", "CINQUENTA", "CINQUENTA E UM", "CINQUENTA E DOIS", "CINQUENTA E TRÊS","CINQUENTA E QUATRO", "CINQUENTA E CINCO", "CINQUENTA E SEIS", "CINQUENTA E SETE","CINQUENTA E OITO", "CINQUENTA E NOVE","SESSENTA", "SESSENTA E UM", "SESSENTA E DOIS", "SESSENTA E TRÊS", "SESSENTA E QUATRO", "SESSENTA E CINCO", "SESSENTA E SEIS","SESSENTA E SETE", "SESSENTA E OITO", "SESSENTA E NOVE","SETENTA", "SETENTA E UM", "SETENTA E DOIS", "SETENTA E TRÊS", "SETENTA E QUATRO", "SETENTA E CINCO", "SETENTA E SEIS", "SETENTA E SETE","SETENTA E OITO", "SETENTA E NOVE", "OITENTA", "OITENTA E UM", "OITENTA E DOIS", "OITENTA E TRÊS", "OITENTA E QUATRO", "OITENTA E CINCO", "OITENTA E SEIS", "OITENTA E SETE", "OITENTA E OITO","OITENTA E NOVE", "NOVENTA", "NOVENTA E UM", "NOVENTA E DOIS", "NOVENTA E TRÊS", "NOVENTA E QUATRO", "NOVENTA E CINCO", "NOVENTA E SEIS", "NOVENTA E SETE", "NOVENTA E OITO", "NOVENTA E NOVE", "CEM"]    
 
+    let arrayTextoNumerosFrances = ["UN","DEUX","TROIS","QUATRE","CINQ","SIX","SEPT","HUIT","NEUF","DIX","ONZE","DOUZE","TREIZE","QUATORZE","QUINZE","SEIZE","DIX-SEPT","DIX-HUIT","DIX-NEUF","VINGT","VINGT ET UN","VINGT-DEUZ","VINGT-TROIS","VINGT-QUATRE","VINGT-CINQ","VINGT-SIX","VINGT-SEPT","VINGT-HUIT","VINGT-NEUF","TRENTE","TRENTE ET UN","TRENTE-DEUX","TRENTE-TROIS","TRENTE-QUATRE","TRENTE-CINQ","TRENTE-SIX","TRENTE-SEPT","TRENTE-HUIT","TRENTE-NEUF","QUARANTE","QUARANTE ET UN","QUARANTE-DEUX","QUARANTE-TROIS","QUARANTE-QUATRE","QUARANTE-CINQ","QUARANTE-SIX","QUARANTE-SEPT","QUARANTE-HUIT","QUARANTE-NEUF","CINQUANTE","CINQUANTE ET UN","CINQUANTE-DEUX","CINQUANTE-TROIS","CINQUANTE-QUATRE","CINQUANTE-CINQ","CINQUANTE-SIX","CINQUANTE-SEPT","CINQUANTE-HUIT","CINQUANTE-NEUF","SOIXANTE","SOIXANTE ET UN","SOIXANTE-DEUX","SOIXANTE-TROIS","SOIXANTE-QUATRE","SOIXANTE-CINQ","SOIXANTE-SIX","SOIXANTE-SEPT","SOIXANTE-HUIT","SOIXANTE-NEUF","SOIXANTE-DIX","SOIXANTE ET ONZE","SOIXANTE-DOUZE","SOIXANTE-TREIZE","SOIXANTE-QUATORZE","SOIXANTE-QUINZE","SOIXANTE-SEIZE","SOIXANTE-DIX-SEPT","SOIXANTE-DIX-HUIT","SOIXANTE-DIX-NEUF","QUATRE-VINGTS","QUATRE-VINGT-UN","QUATRE-VINGT-DEUX","QUATRE-VINGT-TROIS","QUATRE-VINGT-QUATRE","QUATRE-VINGT-CINQ","QUATRE-VINGT-SIX","QUATRE-VINGT-SEPT","QUATRE-VINGT-HUIT","QUATRE-VINGT-NEUF","QUATRE-VINGT-DIX","QUATRE-VINGT-ONZE","QUATRE-VINGT-DOUZE","QUATRE-VINGT-TREIZE","QUATRE-VINGT-QUATORZE","QUATRE-VINGT-QUINZE","QUATRE-VINGT-SEIZE","QUATRE-VINGT-DIX-SEPT","QUATRE-VINGT-DIX-HUIT","QUATRE-VINGT-DIX-NEUF","CENT"]
+    
+    let arrayTextoNumerosItaliano = ["UNO","DUE","TRE","QUATTRO","CINQUE","SEI","SETTE","OTTO","NOVE","DIECI","UNDICI","DODICI","TREDICI","QUATTORDICI","QUINDICI","SEDICI","DICIASSETTE","DICIOTTO","DICIANNOVE","VENTI","VENTIUNO","VENTIDUE","VENTITRÉ","VENTIQUATTRO","VENTICINQUE","VENTISEI","VENTISETTE","VENTOTTO","VENTINOVE","TRENTA","TRENTUNO","TRENTADUE","TRENTATRÉ","TRENTAQUATTRO","TRENTACINQUE","TRENTASEI","TRENTASETTE","TRENTOTTO","TRENTANOVE","QUARANTA","QUARANTUNO","QUARANTADUE","QUARANTATRÉ","QUARANTAQUATTRO","QUARANTACINQUE","QUARANTASEI","QUARANTASETTE","QUARANTOTTO","QUARANTANOVE","CINQUANTA","CINQUANTUNO","CINQUANTADUE","CINQUANTATRÉ","CINQUANTAQUATTRO","CINQUANTACINQUE","CINQUANTASEI","CINQUANTASETTE","CINQUANTOTTO","CINQUANTANOVE","SESSANTA","SESSANTUNO","SESSANTADUE","SESSANTATRÉ","SESSANTAQUATTRO","SESSANTACINQUE","SESSANTASEI","SESSANTASETTE","SESSANTOTTO","SESSANTANOVE","SETTANTA","SETTANTUNO","SETTANTADUE","SETTANTATRÉ","SETTANTAQUATTRO","SETTANTACINQUE","SETTANTASEI","SETTANTASETTE","SETTANTOTTO","SETTANTANOVE","OTTANTA","OTTANTUNO","OTTANTADUE","OTTANTATRÉ","OTTANTAQUATTRO","OTTANTACINQUE","OTTANTASEI","OTTANTASETTE","OTTANTOTTO","OTTANTANOVE","NOVANTA","NOVANTUNO","NOVANTADUE","NOVANTATRÉ","NOVANTAQUATTRO","NOVANTACINQUE","NOVANTASEI","NOVANTASETTE","NOVANTOTTO","NOVANTANOVE","CENTO"]
     
     let sonidocazado = SKAction.playSoundFileNamed("laser-sound", waitForCompletion: false)
     let sonidofallado = SKAction.playSoundFileNamed("slam", waitForCompletion: false)
@@ -115,6 +118,9 @@ class Scene: SKScene {
         print(arrayTextoNumeros.count)
         print(arrayTextoNumerosIngles.count)
         print(arrayTextoNumerosPortugues.count)
+        print(arrayTextoNumerosFrances.count)
+        print(arrayTextoNumerosItaliano.count)
+        
         calcularPosiciones()
         ponerMirilla()
         ponerBotonDerecho()
@@ -128,6 +134,8 @@ class Scene: SKScene {
         asignarIdioma()
 
     }
+    
+   
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
@@ -200,6 +208,10 @@ class Scene: SKScene {
             return
         case 2:
             arrayTextoNumeros = arrayTextoNumerosPortugues
+        case 3:
+            arrayTextoNumeros = arrayTextoNumerosFrances
+        case 4:
+            arrayTextoNumeros = arrayTextoNumerosItaliano
         default:
             return
         }
@@ -246,7 +258,6 @@ class Scene: SKScene {
                 let numeroCapturado = self.obtenerNumeroInt(spriteCapturado: numero)
 
                 if numeroCapturado == (self.ultimoCapturado + 1) || numeroCapturado == self.valorMinimo{//|| numeroCapturado < 100
-                    //self.destruirNumero(numero: numero)
                     self.marcador.isHidden = false
                     self.spriteFondoBlanco.isHidden = false
                     self.lanzarLaserDestruir(numero: numero)
@@ -267,7 +278,7 @@ class Scene: SKScene {
                             //numero.run(self.sonidoFinPartida)
                             NotificationCenter.default.post(name: NSNotification.Name("irFinPartida"), object: nil)
                         }
-
+                        
                     }
                 }
                 else{
@@ -346,8 +357,6 @@ class Scene: SKScene {
         spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minX)!, y: self.frame.maxY - (marcador.fontSize * 2.5))
         
         if UIDevice.current.userInterfaceIdiom == .phone{
-            print(UIScreen.main.nativeBounds.width)
-            print(UIScreen.main.nativeBounds.height)
             switch UIScreen.main.nativeBounds.width {
             case 0...641:
                 print("640 iphone se")
@@ -378,8 +387,15 @@ class Scene: SKScene {
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
             print("ipad fondo")
-            spriteFondoBlanco.scale(to: CGSize(width: (self.view?.frame.size.width)!, height: self.marcador.frame.size.height * 2.5))
-            spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minX)!, y: self.frame.maxY - (marcador.fontSize * 2.5))
+            if UIDevice.current.orientation.isPortrait{
+                spriteFondoBlanco.scale(to: CGSize(width: (self.view?.frame.size.width)!, height: self.marcador.frame.size.height * 2.5))
+                spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minX)!, y: self.frame.maxY - (marcador.fontSize * 2.5))
+            }
+            else{
+                spriteFondoBlanco.scale(to: CGSize(width: (self.view?.frame.size.width)!, height: self.marcador.frame.size.height * 2.5))
+                spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minY)!, y: self.frame.maxX - (marcador.fontSize * 2.5))
+            }
+
 
         }
         addChild(spriteFondoBlanco)
@@ -423,8 +439,16 @@ class Scene: SKScene {
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
             print("ipad marcador")
-            marcador.fontSize = 36
-            marcador.position = CGPoint(x: self.frame.maxX - (marcador.fontSize * 2), y: self.frame.maxY - (marcador.fontSize * 3))
+            if UIDevice.current.orientation.isPortrait{
+                marcador.fontSize = 36
+                marcador.position = CGPoint(x: self.frame.maxX - (marcador.fontSize * 2), y: self.frame.maxY - (marcador.fontSize * 3))
+
+            }
+            else{
+                marcador.fontSize = 36
+                marcador.position = CGPoint(x: self.frame.maxY - (marcador.fontSize * 2), y: self.frame.maxX - (marcador.fontSize * 3))
+
+            }
 
 
         }
@@ -485,8 +509,16 @@ class Scene: SKScene {
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
             print("ipad laser")
-            spriteLaserVerde.scale(to: CGSize(width: ((self.view?.frame.width)! / 7 ), height: ((self.view?.frame.height)! ) / 2.5 ))
-            spriteLaserVerde.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height * 2.8))
+            if UIDevice.current.orientation.isPortrait{
+                spriteLaserVerde.scale(to: CGSize(width: ((self.view?.frame.width)! / 7 ), height: ((self.view?.frame.height)! ) / 2.5 ))
+                spriteLaserVerde.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height * 2.8))
+
+            }
+            else{
+                spriteLaserVerde.scale(to: CGSize(width: ((self.view?.frame.width)! / 7 ), height: ((self.view?.frame.height)! ) / 2.5 ))
+                spriteLaserVerde.position = CGPoint(x: self.frame.midY, y: self.frame.minX + (self.spriteBotonStart.frame.height * 2.8))
+
+            }
 
         }
         
@@ -532,8 +564,15 @@ class Scene: SKScene {
 
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
-            spriteBotonDerecho.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-            spriteBotonDerecho.position = CGPoint(x: self.frame.maxX - (spriteBotonDerecho.size.width / 1.2), y: self.frame.minY + (self.spriteBotonDerecho.frame.height * 1.7))
+            if UIDevice.current.orientation.isPortrait{
+                spriteBotonDerecho.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonDerecho.position = CGPoint(x: self.frame.maxX - (spriteBotonDerecho.size.width / 1.2), y: self.frame.minY + (self.spriteBotonDerecho.frame.height * 1.7))
+            }
+            else{
+                spriteBotonDerecho.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonDerecho.position = CGPoint(x: self.frame.maxY - (spriteBotonDerecho.size.width / 1.2), y: self.frame.minX + (self.spriteBotonDerecho.frame.height * 1.7))
+            }
+
 
         }
         
@@ -580,8 +619,15 @@ class Scene: SKScene {
 
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
-                    spriteBotonIzquierdo.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-            spriteBotonIzquierdo.position = CGPoint(x: self.frame.minX + (spriteBotonIzquierdo.size.width / 1.2), y: self.frame.minY +  (self.spriteBotonIzquierdo.frame.height * 1.7))
+            if UIDevice.current.orientation.isPortrait{
+                spriteBotonIzquierdo.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonIzquierdo.position = CGPoint(x: self.frame.minX + (spriteBotonIzquierdo.size.width / 1.2), y: self.frame.minY +  (self.spriteBotonIzquierdo.frame.height * 1.7))
+            }
+            else{
+                spriteBotonIzquierdo.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonIzquierdo.position = CGPoint(x: self.frame.minY + (spriteBotonIzquierdo.size.width / 1.2), y: self.frame.minX +  (self.spriteBotonIzquierdo.frame.height * 1.7))
+            }
+
 
 
         }
@@ -629,10 +675,16 @@ class Scene: SKScene {
 
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
-                    spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-                    spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.8))
+            if UIDevice.current.orientation.isPortrait{
+                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.8))
 
+            }
+            else{
+                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonStart.position = CGPoint(x: self.frame.midY, y: self.frame.minX + (self.spriteBotonStart.frame.height / 1.8))
 
+            }
         }
         addChild(spriteBotonStart)
     }

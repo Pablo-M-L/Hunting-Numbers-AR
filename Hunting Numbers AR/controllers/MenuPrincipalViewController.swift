@@ -12,7 +12,7 @@ class MenuPrincipalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserDefaults.standard.set(false,forKey: "vuelveDefinPartida")
         // Do any additional setup after loading the view.
     }
     
