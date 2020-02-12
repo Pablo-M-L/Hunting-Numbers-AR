@@ -14,8 +14,17 @@ class MenuPrincipalViewController: UIViewController {
         super.viewDidLoad()
         UserDefaults.standard.set(false,forKey: "vuelveDefinPartida")
         // Do any additional setup after loading the view.
+        
+
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+             delegate.orientationLock = .all
+         }
+    }
 
     /*
     // MARK: - Navigation

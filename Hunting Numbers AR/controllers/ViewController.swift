@@ -112,12 +112,28 @@ class ViewController: UIViewController, ARSKViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //bloquear autogiro
+        if UIDevice.current.orientation.isPortrait{
+            if let delegate = UIApplication.shared.delegate as? AppDelegate {
+                 delegate.orientationLock = .portrait
+             }
+        }
+        else if UIDevice.current.orientation.isLandscape{
+            if let delegate = UIApplication.shared.delegate as? AppDelegate {
+                 delegate.orientationLock = .landscape
+             }
+        }
+        
+ 
+
         if UserDefaults.standard.bool(forKey: "vuelveDefinPartida"){
             UserDefaults.standard.set(false,forKey: "vuelveDefinPartida")
             self.dismiss(animated: true, completion: nil)
         }
         
-        super.viewWillAppear(animated)
+        
         var arrayRondaEnCurso = [Int]()
         arrayRondaEnCurso = []
         UserDefaults.standard.set(arrayRondaEnCurso, forKey: "array")
@@ -149,6 +165,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         print("did disapp")
     }
+
+
     
     // MARK: - ARSKViewDelegate
     

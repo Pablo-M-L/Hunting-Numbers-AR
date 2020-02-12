@@ -75,6 +75,7 @@ class Scene: SKScene {
     override func didMove(to view: SKView) {
         // Setup your scene here
         //self.perform(#selector(puntoCero), with: nil, afterDelay: 1)
+        print("ancho ipad en el did \(UIScreen.main.nativeBounds.width)")
         cantidadMaximaEnPantallaSeleccionada = UserDefaults.standard.integer(forKey: "cantidadNumeroEnPantalla")
         valorMinimo = UserDefaults.standard.integer(forKey: "valorMinimo")
         valorMaximo = UserDefaults.standard.integer(forKey: "valorMaximo")
@@ -122,16 +123,19 @@ class Scene: SKScene {
         print(arrayTextoNumerosItaliano.count)
         
         calcularPosiciones()
+        ponerBotonStart()
+        /*
         ponerMirilla()
         ponerBotonDerecho()
         ponerBotonIzquierdo()
-        ponerBotonStart()
+        
         //ponerLaserVerde()
         ponerMarcador()
         ponerFondoBlanco()
         marcador.isHidden = true
         spriteFondoBlanco.isHidden = true
         asignarIdioma()
+        */
 
     }
     
@@ -185,8 +189,17 @@ class Scene: SKScene {
             if i.name == "btnStart"{
                 print("boton start")
                 if !partidaEmpezada{
-                    spriteBotonStart.texture = imgMangoLaser
-                    spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 10), height: ((self.view?.frame.width)! / 4)))
+                    cambiarStartPorMango()
+                    ponerMirilla()
+                    ponerBotonDerecho()
+                    ponerBotonIzquierdo()
+                    
+                    //ponerLaserVerde()
+                    ponerMarcador()
+                    ponerFondoBlanco()
+                    marcador.isHidden = true
+                    spriteFondoBlanco.isHidden = true
+                    asignarIdioma()
                     timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { (timer) in
                         self.repartirNumero()
                     })
@@ -343,7 +356,13 @@ class Scene: SKScene {
 
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
-        spriteCruceta.scale(to: CGSize(width: (self.view?.frame.midX)!, height: (self.view?.frame.midY)! / 1.3))
+            if UIDevice.current.orientation == .portrait{
+                spriteCruceta.scale(to: CGSize(width: (self.view?.frame.midX)!, height: (self.view?.frame.midY)! / 1.3))
+            }
+            else{
+                spriteCruceta.scale(to: CGSize(width: ((self.view?.frame.midX)! / 1.5) , height: (self.view?.frame.midY)! / 1.5))
+            }
+            
 
         }
         
@@ -365,7 +384,8 @@ class Scene: SKScene {
             case 752...1125:
                     print("1125 iphone 11 pro y 828 iphone 11 y iphone 7 plus (coge phisycal pixel 1080) ")
                     if UIScreen.main.nativeBounds.width == 1080{
-                        spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minX)!, y: self.frame.maxY - (marcador.fontSize * 4))
+                        print("iphone 7 plus")
+                        //spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minX)!, y: self.frame.maxY - (marcador.fontSize * 4))
                     }
                     else{
                         print("iphone 11 y 11 pro")
@@ -393,7 +413,7 @@ class Scene: SKScene {
             }
             else{
                 spriteFondoBlanco.scale(to: CGSize(width: (self.view?.frame.size.width)!, height: self.marcador.frame.size.height * 2.5))
-                spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minY)!, y: self.frame.maxX - (marcador.fontSize * 2.5))
+                spriteFondoBlanco.position = CGPoint(x: (self.view?.frame.minX)!, y: self.frame.maxY - (marcador.fontSize * 2.6))
             }
 
 
@@ -422,7 +442,8 @@ class Scene: SKScene {
             case 752...1125:
                     print("1125 iphone 11 pro y 828 iphone 11 y iphone 7 plus (coge phisycal pixel 1080) ")
                     if UIScreen.main.nativeBounds.width == 1080{
-                        marcador.position = CGPoint(x: self.frame.maxX - (marcador.fontSize * 2), y: self.frame.maxY - (marcador.fontSize * 4.5))
+                        print("iphone 7 plus")
+                        //marcador.position = CGPoint(x: self.frame.maxX - (marcador.fontSize * 2), y: self.frame.maxY - (marcador.fontSize * 4.5))
                     }
             case 1160...1250:
                     if UIScreen.main.nativeBounds.height > 2300{
@@ -446,7 +467,7 @@ class Scene: SKScene {
             }
             else{
                 marcador.fontSize = 36
-                marcador.position = CGPoint(x: self.frame.maxY - (marcador.fontSize * 2), y: self.frame.maxX - (marcador.fontSize * 3))
+                marcador.position = CGPoint(x: self.frame.maxX - (marcador.fontSize * 2), y: self.frame.maxY - (marcador.fontSize * 3))
 
             }
 
@@ -515,8 +536,8 @@ class Scene: SKScene {
 
             }
             else{
-                spriteLaserVerde.scale(to: CGSize(width: ((self.view?.frame.width)! / 7 ), height: ((self.view?.frame.height)! ) / 2.5 ))
-                spriteLaserVerde.position = CGPoint(x: self.frame.midY, y: self.frame.minX + (self.spriteBotonStart.frame.height * 2.8))
+                spriteLaserVerde.scale(to: CGSize(width: ((self.view?.frame.width)! / 9 ), height: ((self.view?.frame.height)! ) / 2.5 ))
+                spriteLaserVerde.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height * 2))
 
             }
 
@@ -547,7 +568,7 @@ class Scene: SKScene {
             case 752...1125:
                 print("1125 iphone 11 pro y 828 iphone 11 y iphone 7 plus (coge phisycal pixel 1080) ")
                 if UIScreen.main.nativeBounds.width == 1080{
-                    spriteBotonDerecho.position = CGPoint(x: self.frame.maxX - (spriteBotonDerecho.size.width / 1.2), y: self.frame.minY + (self.spriteBotonDerecho.frame.height * 1.7))
+                    spriteBotonDerecho.position = CGPoint(x: self.frame.maxX - (spriteBotonDerecho.size.width / 1.7), y: self.frame.minY + (self.spriteBotonDerecho.frame.height * 1.7))
                 }
             case 1160...1250:
                     if UIScreen.main.nativeBounds.height > 2300{
@@ -569,8 +590,8 @@ class Scene: SKScene {
                 spriteBotonDerecho.position = CGPoint(x: self.frame.maxX - (spriteBotonDerecho.size.width / 1.2), y: self.frame.minY + (self.spriteBotonDerecho.frame.height * 1.7))
             }
             else{
-                spriteBotonDerecho.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-                spriteBotonDerecho.position = CGPoint(x: self.frame.maxY - (spriteBotonDerecho.size.width / 1.2), y: self.frame.minX + (self.spriteBotonDerecho.frame.height * 1.7))
+                spriteBotonDerecho.scale(to: CGSize(width: ((self.view?.frame.width)! / 9), height: ((self.view?.frame.width)! / 9)))
+                spriteBotonDerecho.position = CGPoint(x: self.frame.maxX - (spriteBotonDerecho.size.width), y: self.frame.minY + (self.spriteBotonDerecho.frame.height * 1.7))
             }
 
 
@@ -599,7 +620,7 @@ class Scene: SKScene {
             case 752...1125:
                 print("1125 iphone 11 pro y 828 iphone 11 y iphone 7 plus (coge phisycal pixel 1080) ")
                 if UIScreen.main.nativeBounds.width == 1080{
-                    spriteBotonIzquierdo.position = CGPoint(x: self.frame.minX + (spriteBotonIzquierdo.size.width / 1.2), y: self.frame.minY +  (self.spriteBotonIzquierdo.frame.height * 1.7))
+                    spriteBotonIzquierdo.position = CGPoint(x: self.frame.minX + (spriteBotonIzquierdo.size.width / 1.7), y: self.frame.minY +  (self.spriteBotonIzquierdo.frame.height * 1.7)) // antes 1.2 en x
                 }
             case 1160...1250:
                     
@@ -624,8 +645,8 @@ class Scene: SKScene {
                 spriteBotonIzquierdo.position = CGPoint(x: self.frame.minX + (spriteBotonIzquierdo.size.width / 1.2), y: self.frame.minY +  (self.spriteBotonIzquierdo.frame.height * 1.7))
             }
             else{
-                spriteBotonIzquierdo.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-                spriteBotonIzquierdo.position = CGPoint(x: self.frame.minY + (spriteBotonIzquierdo.size.width / 1.2), y: self.frame.minX +  (self.spriteBotonIzquierdo.frame.height * 1.7))
+                spriteBotonIzquierdo.scale(to: CGSize(width: ((self.view?.frame.width)! / 9), height: ((self.view?.frame.width)! / 9)))
+                spriteBotonIzquierdo.position = CGPoint(x: self.frame.minX + (spriteBotonIzquierdo.size.width), y: self.frame.minY +  (self.spriteBotonIzquierdo.frame.height * 1.7))
             }
 
 
@@ -638,34 +659,100 @@ class Scene: SKScene {
     func ponerBotonStart(){
         spriteBotonStart = SKSpriteNode(texture: imgBotonStart)
         spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 4), height: ((self.view?.frame.width)! / 4)))
-        spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.9))
+        //spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.9))
+        spriteBotonStart.position = CGPoint(x: 0.0, y: 0.0)
         spriteBotonStart.zPosition = 3
         spriteBotonStart.name = "btnStart"
-        
+        /*
         if UIDevice.current.userInterfaceIdiom == .phone{
             switch UIScreen.main.nativeBounds.width {
             case 0...641:
                 print("640 iphone se")
             case 642...751:
                     print("750 iphone 8")
-                    spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2.1))
+                    spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2.1))
 
             
             case 752...1125:
                 print("1125 iphone 11 pro y 828 iphone 11 y iphone 7 plus (coge phisycal pixel 1080) ")
                 if UIScreen.main.nativeBounds.width == 1080{
-                    spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.3))
+                    spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.3))
                 }
             case 1160...1250:
                     
                     if UIScreen.main.nativeBounds.height > 2300{
                         print("1242 * 2688 iphone 11 pro max")
-                        spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2))
+                        spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2))
 
                     }
                     else{
                         print("1242 * 2208 iphone 8 plus")
-                        spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2))
+                        spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2))
+                    }
+
+            default:
+                print("default")
+
+            }
+
+        }
+        else if UIDevice.current.userInterfaceIdiom == .pad{
+            print("ancho ipad \(UIScreen.main.nativeBounds.width)")
+             print("alto ipad \(UIScreen.main.nativeBounds.height)")
+            print("frame minX \(self.frame.minX)")
+            print("frame minY \(self.frame.minY)")
+            print("frame width \(self.frame.width)")
+            print("frame height \(self.frame.height)")
+            
+            
+            if UIDevice.current.orientation.isPortrait{
+                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.8))
+
+            }
+            else{
+                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 8), height: ((self.view?.frame.width)! / 8)))
+                spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minX + (self.spriteBotonStart.frame.height * 1.5))
+
+            }
+        }
+        */
+        addChild(spriteBotonStart)
+    }
+    
+    func cambiarStartPorMango(){
+        spriteBotonStart.removeFromParent()
+        spriteBotonStart = SKSpriteNode(texture: imgMangoLaser)
+        spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 10), height: ((self.view?.frame.width)! / 4)))
+        spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.9))
+        spriteBotonStart.zPosition = 3
+        spriteBotonStart.name = "btnStart"
+        
+        print("bounds alto \(UIScreen.main.bounds.height)")
+        if UIDevice.current.userInterfaceIdiom == .phone{
+            switch UIScreen.main.nativeBounds.width {
+            case 0...641:
+                print("640 iphone se")
+            case 642...751:
+                    print("750 iphone 8")
+                    spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2.1))
+
+            
+            case 752...1125:
+                print("1125 iphone 11 pro y 828 iphone 11 y iphone 7 plus (coge phisycal pixel 1080) poner el mango")
+                if UIScreen.main.nativeBounds.width == 1080{
+                    spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.9))
+                }
+            case 1160...1250:
+                    
+                    if UIScreen.main.nativeBounds.height > 2300{
+                        print("1242 * 2688 iphone 11 pro max")
+                        spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2))
+
+                    }
+                    else{
+                        print("1242 * 2208 iphone 8 plus")
+                        spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 2))
                     }
 
             default:
@@ -676,13 +763,13 @@ class Scene: SKScene {
         }
         else if UIDevice.current.userInterfaceIdiom == .pad{
             if UIDevice.current.orientation.isPortrait{
-                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-                spriteBotonStart.position = CGPoint(x: self.frame.midX, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.8))
+                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 13), height: ((self.view?.frame.width)! / 7)))
+                spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minY + (self.spriteBotonStart.frame.height / 1.8))
 
             }
             else{
-                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 7), height: ((self.view?.frame.width)! / 7)))
-                spriteBotonStart.position = CGPoint(x: self.frame.midY, y: self.frame.minX + (self.spriteBotonStart.frame.height / 1.8))
+                spriteBotonStart.scale(to: CGSize(width: ((self.view?.frame.width)! / 15), height: ((self.view?.frame.width)! / 10)))
+                spriteBotonStart.position = CGPoint(x: 0.0, y: self.frame.minX + (self.spriteBotonStart.frame.height * 1.8))
 
             }
         }
@@ -706,7 +793,7 @@ class Scene: SKScene {
             arrayPosicionesY.append(redondearConDecimales(numeroDecimales: 2, numeroFloat: posicion))
         }
         arrayPosicionesX = arrayPosicionesY.reversed()
-        arrayPosicionesZ = arrayPosicionesY
+        //arrayPosicionesZ = arrayPosicionesY
     }
     
     func repartirNumero(){
@@ -742,18 +829,20 @@ class Scene: SKScene {
             
             let multiplicadorY = arrayPosicionesY.randomElement()!
             let rotateY = simd_float4x4(SCNMatrix4MakeRotation(2.0 * Float.pi * multiplicadorY , 0, 1, 0))
-            let indiceYABorrar = quitarPosicion(posicion: multiplicador, array: arrayPosicionesY)
+            let indiceYABorrar = quitarPosicion(posicion: multiplicadorY, array: arrayPosicionesY)
             arrayPosicionesY.remove(at: indiceYABorrar)
             
+            /*
             //el eje de rotacion z es el que atraviesa la pantalla.
             let multiplicadorZ = arrayPosicionesZ.randomElement()!
-            let rotateZ = simd_float4x4(SCNMatrix4MakeRotation(2.0 * Float.pi * multiplicadorZ , 0, 1, 0))
-            let indiceZABorrar = quitarPosicion(posicion: multiplicador, array: arrayPosicionesY)
+            let rotateZ = simd_float4x4(SCNMatrix4MakeRotation(2.0 * Float.pi * multiplicadorZ , 0, 0, 1))
+            let indiceZABorrar = quitarPosicion(posicion: multiplicadorZ, array: arrayPosicionesY)
             arrayPosicionesZ.remove(at: indiceZABorrar)
-
+            */
+            
             // combinar las dos rotaciones con un producto de matrices.
             let rotation = simd_mul(rotateX, rotateY)
-            let rotationTotal = simd_mul(rotation, rotateZ)
+            
             
             //crear una translacion de 1.5 metros den la direccion de la pantalla.
             var translation = matrix_identity_float4x4
@@ -764,7 +853,7 @@ class Scene: SKScene {
             translation.columns.3.z = Float(distancia) * -1
             
             //combinar la matriz de rotacion con la matriz de translacion. primero se rota y despues se translada.
-            let finalTransform = simd_mul(rotationTotal, translation)
+            let finalTransform = simd_mul(rotation, translation)
 
             //creamos el punto de anclaje.
             let anchor = ARAnchor(transform: finalTransform)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bf2-QK-8is">
-    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,16 +10,16 @@
         <!--MENU-->
         <scene sceneID="VSa-ZY-j19">
             <objects>
-                <viewController id="c8W-7V-EXI" customClass="MenuPrincipalViewController" customModule="AR_Hunting_Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c8W-7V-EXI" customClass="MenuPrincipalViewController" customModule="Number_H_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTs-YE-jbb">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoVerdosoDegradado" translatesAutoresizingMaskIntoConstraints="NO" id="A3I-a1-9Yn">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWF-IR-5kt">
-                                <rect key="frame" x="463.5" y="650.5" width="97" height="65"/>
+                                <rect key="frame" x="158.66666666666666" y="335.66666666666669" width="97" height="65"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
                                 <state key="normal" title="PLAY">
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-JU-vOY">
-                                <rect key="frame" x="71" y="760" width="882" height="65"/>
+                                <rect key="frame" x="71" y="445" width="272" height="65"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="SETTINGS">
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWh-uS-R9G">
-                                <rect key="frame" x="421.5" y="844" width="181" height="49"/>
+                                <rect key="frame" x="116.66666666666669" y="529" width="181" height="49"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="INSTRUCTIONS">
@@ -55,14 +55,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUMBER HUNTER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="MOR-ob-jr0">
-                                <rect key="frame" x="16" y="524.5" width="992" height="66"/>
+                                <rect key="frame" x="16" y="131" width="382" height="134.66666666666663"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="49"/>
                                 <color key="textColor" red="0.63186198472976685" green="0.18081620335578918" blue="0.21035408973693848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="4" height="2"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="75"/>
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="51"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="97"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -81,7 +84,10 @@
                             <constraint firstItem="Xwk-gK-kaj" firstAttribute="trailing" secondItem="MOR-ob-jr0" secondAttribute="trailing" constant="16" id="nlz-sB-U9i"/>
                             <constraint firstItem="hWh-uS-R9G" firstAttribute="top" secondItem="Izf-JU-vOY" secondAttribute="bottom" constant="19" id="oVZ-cv-gXP"/>
                             <constraint firstItem="FWF-IR-5kt" firstAttribute="centerX" secondItem="YTs-YE-jbb" secondAttribute="centerX" id="ozg-mh-aWq"/>
-                            <constraint firstItem="FWF-IR-5kt" firstAttribute="top" secondItem="MOR-ob-jr0" secondAttribute="bottom" constant="60" id="sFo-ob-IcR"/>
+                            <constraint firstItem="FWF-IR-5kt" firstAttribute="top" secondItem="MOR-ob-jr0" secondAttribute="bottom" constant="20" id="sFo-ob-IcR">
+                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
                             <constraint firstItem="Xwk-gK-kaj" firstAttribute="trailing" secondItem="Izf-JU-vOY" secondAttribute="trailing" constant="71" id="vXL-Iu-Iyn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xwk-gK-kaj"/>
@@ -97,16 +103,16 @@
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="AR_Hunting_Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Number_H_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arskView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO5-fy-WZq">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </arskView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-6V-MmX">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44051563739999999" green="0.73915636539999996" blue="0.74121057990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -141,19 +147,19 @@
         <!--Intrucciones View Controller-->
         <scene sceneID="qhg-8I-FeT">
             <objects>
-                <viewController id="xPd-q0-rEU" customClass="IntruccionesViewController" customModule="AR_Hunting_Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xPd-q0-rEU" customClass="IntruccionesViewController" customModule="Number_H_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b6Q-te-69W">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoVerdosoDegradado" translatesAutoresizingMaskIntoConstraints="NO" id="Eyt-ez-BCd">
-                                <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWa-DL-661">
-                                <rect key="frame" x="5" y="5" width="702" height="938"/>
+                                <rect key="frame" x="5" y="5" width="404" height="647"/>
                                 <string key="text">Instructions:
 
-AR Hunting Numbers is an augmented reality game to help children learn numbers in an interactive and fun way.
+AR Number Hunter is an augmented reality game to help children learn numbers in an interactive and fun way.
 In the game you can specify the range of numbers of a game, these will be shown 5 by 5 during the game.
 
 Steps to play.
@@ -189,7 +195,7 @@ Escalado de Iconos: www.makeicon.com</string>
                                 </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rb-q5-a2M">
-                                <rect key="frame" x="329" y="957" width="54" height="38"/>
+                                <rect key="frame" x="180" y="666" width="54" height="38"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="CLOSE">
                                     <color key="titleColor" red="0.63186198472976685" green="0.18081620335578918" blue="0.21035408973693848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,38 +231,38 @@ Escalado de Iconos: www.makeicon.com</string>
         <!--Fin Partida View Controller-->
         <scene sceneID="pgB-je-25z">
             <objects>
-                <viewController id="2bI-Ix-msM" customClass="FinPartidaViewController" customModule="AR_Hunting_Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2bI-Ix-msM" customClass="FinPartidaViewController" customModule="Number_H_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5p-tE-2Ua">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoVerdosoDegradado" translatesAutoresizingMaskIntoConstraints="NO" id="hEv-oF-nfE">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1116.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1116.6666666666667"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jef-rQ-bQb">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" red="0.44051563739999999" green="0.73915636539999996" blue="0.74121057990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="FINISH" id="iP8-vg-opr"/>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronaLaurel" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-ev-BYT">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONGRATULATIONS. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Ixv-ms-x5u">
-                                <rect key="frame" x="24" y="621" width="976" height="39"/>
+                                <rect key="frame" x="24" y="306" width="366" height="39"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" red="0.63186198472976685" green="0.18081620335578918" blue="0.21035408973693848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU FINISH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="afD-dw-xEs">
-                                <rect key="frame" x="36" y="668" width="954" height="30"/>
+                                <rect key="frame" x="36" y="353" width="344" height="30"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
                                 <color key="textColor" red="0.63186198472976685" green="0.18081620335578918" blue="0.21035408973693848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6X-Eb-rIA">
-                                <rect key="frame" x="471.5" y="727" width="81" height="51"/>
+                                <rect key="frame" x="166.66666666666666" y="412" width="81" height="51"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="CLOSE">
                                     <color key="titleColor" red="0.63186198472976685" green="0.18081620335578918" blue="0.21035408973693848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -298,13 +304,13 @@ Escalado de Iconos: www.makeicon.com</string>
         <!--Ajustes Numeros View Controller-->
         <scene sceneID="OdK-8e-ahi">
             <objects>
-                <viewController id="CPh-mG-KB9" customClass="AjustesNumerosViewController" customModule="AR_Hunting_Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CPh-mG-KB9" customClass="AjustesNumerosViewController" customModule="Number_H_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="euT-u7-Pbf">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRr-wZ-b4p">
-                                <rect key="frame" x="0.0" y="0.0" width="712" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44051563739999999" green="0.73915636539999996" blue="0.74121057990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -318,13 +324,13 @@ Escalado de Iconos: www.makeicon.com</string>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playground" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDq-lw-TGL">
-                                <rect key="frame" x="16" y="88" width="680" height="21"/>
+                                <rect key="frame" x="16" y="88" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number range:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="XsS-U6-BZH">
-                                <rect key="frame" x="16" y="175" width="680" height="21"/>
+                                <rect key="frame" x="16" y="175" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -336,13 +342,13 @@ Escalado de Iconos: www.makeicon.com</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcV-Pe-ltz">
-                                <rect key="frame" x="675" y="208.5" width="21" height="20"/>
+                                <rect key="frame" x="377" y="208.66666666666666" width="21" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9H-Gs-b1P">
-                                <rect key="frame" x="675" y="251.5" width="21" height="20"/>
+                                <rect key="frame" x="377" y="251.66666666666663" width="21" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -354,21 +360,21 @@ Escalado de Iconos: www.makeicon.com</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="19" translatesAutoresizingMaskIntoConstraints="NO" id="8Jc-uS-gDl">
-                                <rect key="frame" x="132" y="203.5" width="537" height="31"/>
+                                <rect key="frame" x="132" y="203.66666666666666" width="239" height="31"/>
                                 <connections>
                                     <action selector="BtnSliderMinimo:" destination="CPh-mG-KB9" eventType="valueChanged" id="An2-IP-Txd"/>
                                     <action selector="btnUpSliderMinimo:" destination="CPh-mG-KB9" eventType="touchUpInside" id="cZX-aa-Su8"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-ON-m8B">
-                                <rect key="frame" x="132" y="246.5" width="537" height="31"/>
+                                <rect key="frame" x="132" y="246.66666666666663" width="239" height="31"/>
                                 <connections>
                                     <action selector="BtnSliderMaximo:" destination="CPh-mG-KB9" eventType="valueChanged" id="F93-7H-03I"/>
                                     <action selector="btnUpSliderMaximo:" destination="CPh-mG-KB9" eventType="touchUpInside" id="beS-gc-5By"/>
                                 </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rak-hu-chZ">
-                                <rect key="frame" x="16" y="116" width="680" height="32"/>
+                                <rect key="frame" x="16" y="116" width="382" height="32"/>
                                 <segments>
                                     <segment title="Small"/>
                                     <segment title="medium"/>
@@ -386,7 +392,7 @@ Escalado de Iconos: www.makeicon.com</string>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Kbv-V2-vfg">
-                                <rect key="frame" x="16" y="387.5" width="81" height="21"/>
+                                <rect key="frame" x="16" y="387.66666666666669" width="81" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="AYp-Sv-FZT"/>
                                 </constraints>
@@ -450,7 +456,7 @@ Escalado de Iconos: www.makeicon.com</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bf2-QK-8is" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ucr-Cd-UGe">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
